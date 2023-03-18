@@ -4,12 +4,109 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-
-    <h2>BLABLA</h2>
-    <h3>Ciaone</h3>
+    <title>Lesson 6</title>
     
-</body>
+</head>
+<style>
+.container {
+  display: grid;
+  width: 100%;
+  height: 500px;
+  text-align: center;
+  grid-template-areas: "header header header"
+                       
+                       "content-2 content-3 sidebar"
+                       " content-1 content-1 sidebar"
+                        "footer footer  footer";
+                        
+  grid-template-columns: 200px 1fr 1fr;
+  grid-template-rows: 80px 1fr 1fr 1fr;
+  gap: 1rem;
+  border: 1px solid color black;
+}
+.header {
+  grid-area: header;
+  border: solid 1px;
+  background-color: rgb(158, 204, 205);
+
+
+}
+
+.sidebar {
+  grid-area: sidebar;
+  border: solid 1px;
+  background-color: rgb(135, 231, 199);
+}
+.content-1 {
+    grid-area: content-1;
+  border: solid 1px;
+  background-color: bisque;
+
+}
+     
+.content-2 {
+  grid-area: content-2;
+  border: solid 1px;
+  background-color: bisque;
+}
+
+.content-3 {
+  grid-area: content-3;
+  
+  border: solid 1px;
+  background-color: bisque;
+  
+
+
+  }
+
+.footer {
+    display: grid;
+  grid-area: footer 1;
+  border: solid 1px;
+  background-color: rgb(196, 165, 225);
+  
+ 
+  grid-template-rows: repeat (4 1fr 1fr 1fr)
+  
+
+}
+.footer {
+    display: grid;
+  grid-area: footer 2;
+  border: solid 1px;
+  
+  grid-template-rows: repeat (4 1fr 1fr 1fr)
+}
+.footer {
+    display: grid;
+  grid-area: footer 3;
+  border: solid 1px;
+   
+   grid-template-rows: repeat (4 1fr 1fr 1fr)
+}
+.footer {
+  grid-area: footer 3;
+  border: solid 1px;
+   
+   grid-template-rows:  ( 1fr 1fr 1fr 1fr)
+}
+
+</style>
+<body>
+    <div class="container">
+        <header class="header">Шапка страницы</header>
+        <div class="content-3">Content-3</div>
+        <div class="content-1">Content-1</div>
+        <div class="content-2">Content-2</div>
+        
+        <aside class="sidebar">Боковая область</aside>
+        
+        <div class="footer"> Секция футера 1
+        <div class="footer"> Секция футера 2</div>
+        <div class="footer"> Секция футера 3</div>
+        <div class="footer"> Секция футера 4</div>
+    </div>
+      </div>  
+   
 </html>
